@@ -22,7 +22,7 @@ if __name__ == "__main__":
     y = fx + error
 
     # Plotting x vs y and x vs sigma square (the variance of error)
-    plot_dataset(x=x, true_function=fx, observations=y, variance=sigma2, save_path="Heteroscedatsticity.png")
+    plot_dataset(x=x, true_function=fx, observations=y, variance=sigma2, save_path="analysis/Heteroscedatsticity.png")
 
     # To do a prediction, we need to divide data into train and test
     ntest = int(n / 4)
@@ -52,7 +52,7 @@ if __name__ == "__main__":
         true_variance=sigma2t,
         predicted_variance=yth_standard[:, 1],
         title="Standard Neural Network",
-        save_path="standard_nn.png",
+        save_path="analysis/standard_nn.png",
     )
     model_nll = build_regression_model(loss=gaussian_nll_loss)
     yth_nll = model_nll.predict(xt)
@@ -65,7 +65,7 @@ if __name__ == "__main__":
         true_variance=sigma2t,
         predicted_variance=np.exp(yth_nll[:, 1]),
         title="Negative Log-Liklihood Neural Network",
-        save_path="nll_nn.png",
+        save_path="analysis/nll_nn.png",
     )
 
     # Comparing the performance between MSE CNN and NLL CNN by using RMSE (Root MSE) and MAE
