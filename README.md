@@ -54,33 +54,6 @@ heteroscedasticity_analysis/
 
 ## Installation
 
-Clone the repository
-
-```bash
-git clone https://github.com/minhokg/heteroscedasticity_analysis.git
-
-cd heteroscedasticity_analysis
-```
-
-Create a virtual environment
-
-```bash
-python -m venv .venv
-```
-
-Activate it
-
-Windows
-
-```bash
-.venv\Scripts\activate
-```
-
-Linux/macOS
-
-```bash
-source .venv/bin/activate
-```
 
 Install dependencies
 
@@ -97,18 +70,6 @@ Run the main script
 ```bash
 python src/heteroscedasticity_analysis/main.py
 ```
-
-The script performs the following steps:
-
-1. Generates synthetic heteroscedastic data.
-2. Visualizes the dataset.
-3. Splits the data into training and testing sets.
-4. Trains a neural network using MSE.
-5. Trains a neural network using Gaussian NLL.
-6. Predicts both mean and variance.
-7. Creates comparison plots.
-8. Evaluates model performance.
-
 
 ---
 
